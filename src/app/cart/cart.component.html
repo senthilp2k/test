@@ -1,0 +1,23 @@
+<div classs="products-header">
+    <h2>All Items</h2>
+    <button [routerLink]="['/cart-details', products]" class="go-to-cart">
+      Go to Cart
+    </button>
+</div>
+<div class="products">
+  <div *ngFor="let p of products;" class="product">
+    <img src="{{p.img_url}}">
+    <div>
+      <div>
+        {{p.name}}
+      </div>
+      <div>        
+        <span class="price">${{p.price}}</span>
+       <span> ${{p.price - (p.price*.01*p.discount)}}</span>
+      </div>
+      <button (click)="addProduct(p)" class="add-product">
+        Add to cart
+      </button>
+    </div>
+  </div>
+</div>

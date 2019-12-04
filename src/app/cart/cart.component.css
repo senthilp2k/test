@@ -1,0 +1,18 @@
+.products{
+    display: flex;
+    flex-wrap: wrap;
+}
+.products > div {
+    margin: 10px;
+    padding: 20px;
+    font-size: 25px;
+}
+.go-to-cart{
+    float: right;
+}
+.price{
+    text-decoration: line-through;
+}
+.products-header{
+    display: flex;
+}
